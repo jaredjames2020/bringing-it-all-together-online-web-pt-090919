@@ -69,7 +69,7 @@ class Dog
       # binding.pry
       
       
-      if db_dog.empty?
+      if !db_dog.empty?
         db_dog
       else
         self.create(dog)
