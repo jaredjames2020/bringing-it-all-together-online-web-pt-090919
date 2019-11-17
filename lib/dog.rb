@@ -61,10 +61,10 @@ class Dog
     self.new_from_db(find_dog_by_id)
   end
   
-  def self.find_or_create_by(dog)
+  def self.find_or_create_by(find_or_create_dog)
     
-    if self.id
-      self.find_by_id(self.id)
+    if self.find_by_id(find_or_create_dog)
+      
     else
       self.create(dog)
     end
