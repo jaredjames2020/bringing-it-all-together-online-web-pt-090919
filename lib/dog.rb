@@ -62,6 +62,7 @@ class Dog
   end
   
   def self.find_or_create_by(find_or_create_dog)
+    binding.pry
     
     if self.find_by_id(find_or_create_dog)
       sql = "SELECT * FROM dogs WHERE id = ?"
@@ -70,7 +71,6 @@ class Dog
       self.create(dog)
     end
     
-    binding.pry
     
   end
   
