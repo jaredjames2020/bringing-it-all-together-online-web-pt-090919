@@ -61,12 +61,12 @@ class Dog
     self.new_from_db(find_dog_by_id)
   end
   
-  def self.find_or_create_by(find_or_create_dog)
+  def self.find_or_create_by(dog)
     binding.pry
     
     if self.find_by_id(find_or_create_dog)
-      sql = "SELECT * FROM dogs WHERE id = ?"
-      DB[:conn].execute(sql, find_or_create_dog)[0]
+      sql = "SELECT * FROM dogs WHERE name = ?, breed = ?"
+      DB[:conn].execute(sql, dog[:name], dog[:breed])
     else
       self.create(dog)
     end
