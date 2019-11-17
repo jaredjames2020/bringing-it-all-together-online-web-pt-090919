@@ -65,10 +65,11 @@ class Dog
       sql = "SELECT * FROM dogs WHERE name = ? AND breed = ?"
       db_dog = DB[:conn].execute(sql, dog[:name], dog[:breed])
       
+      
       # binding.pry
       
       
-      if db_dog[1] == dog[:name] && db_dog[2] == dog[:breed]
+      if db_dog.empty?
         db_dog
       else
         self.create(dog)
