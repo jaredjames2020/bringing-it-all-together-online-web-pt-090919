@@ -65,7 +65,7 @@ class Dog
     
     if self.find_by_id(find_or_create_dog)
       sql = "SELECT * FROM dogs WHERE id = ?"
-      DB[:conn].execute(sql, dog_id)[0]
+      DB[:conn].execute(sql, find_or_create_dog)[0]
     else
       self.create(dog)
     end
