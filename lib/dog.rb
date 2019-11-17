@@ -63,8 +63,8 @@ class Dog
   
   def self.find_or_create_by(dog)
       sql = "SELECT * FROM dogs"
+      new_dog = DB[:conn].execute(sql, dog[:name], dog[:breed])[0]
       binding.pry
-      new_dog = DB[:conn].execute(sql, dog[:name], dog[:breed])
     
     
   end
