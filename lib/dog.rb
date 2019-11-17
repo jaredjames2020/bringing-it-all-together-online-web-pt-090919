@@ -62,6 +62,11 @@ class Dog
   end
   
   def self.find_or_create_by(dog)
+    if self.id
+      self.find_by_id(self.id)
+    else
+      self.create(dog)
+    end
     
     
     # binding.pry
