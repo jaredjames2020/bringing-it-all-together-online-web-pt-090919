@@ -66,9 +66,9 @@ class Dog
       db_dog = DB[:conn].execute(sql, dog[:name], dog[:breed]) 
       binding.pry
       if db_dog 
-        new_dog_db = self.new_from_db(db_dog)
+        self.new_from_db(db_dog)
       else
-        new_dog_db = self.create(dog)
+        self.create(dog)
       end
       
     
