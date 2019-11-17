@@ -65,7 +65,7 @@ class Dog
       new_dog = self.create(dog)
       
     
-    # binding.pry
+    binding.pry
     
   end
   
