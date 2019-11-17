@@ -61,7 +61,8 @@ class Dog
     self.new_from_db(find_dog_by_id)
   end
   
-  def self.find_or_create_by
+  def self.find_or_create_by(dog)
+    binding.pry
   end
   
   
