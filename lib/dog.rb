@@ -70,6 +70,8 @@ class Dog
       self.create(dog)
     end
     
+    binding.pry
+    
   end
   
   
